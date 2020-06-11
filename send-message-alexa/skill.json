@@ -1,0 +1,32 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:984578409938:function:cc9616ca-d4dd-44c2-af4e-87660cf8c9df:Release_0"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "category": "COMMUNICATION",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
+      "locales": {
+        "en-US": {
+          "description": "Send short messages with Alexa",
+          "examplePhrases": [
+            "Alexa, notify people",
+            "hello",
+           
+          ],
+          "keywords": [],
+          "name": "Notify people",
+          "summary": "Sample Short Description"
+        }
+      },
+      "testingInstructions": "Sample Testing Instructions."
+    }
+  }
+}
