@@ -1,0 +1,153 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "notify people",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "GetMessageDetailsIntent",
+          "slots": [
+            {
+              "name": "TO",
+              "type": "AMAZON.PhoneNumber",
+              "samples": [
+                "{TO}"
+              ]
+            },
+            {
+              "name": "MESSAGE",
+              "type": "MESSAGE",
+              "samples": [
+                "{MESSAGE}"
+              ]
+            }
+          ],
+          "samples": [
+            "send {MESSAGE} to {TO}",
+            "send message to {TO} and message is {MESSAGE}",
+            "send message to {TO}",
+            "send message "
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "this can be very long an long and long and long"
+              }
+            },
+            {
+              "name": {
+                "value": "test message"
+              }
+            }
+          ],
+          "name": "MESSAGE"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetMessageDetailsIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "TO",
+              "type": "AMAZON.PhoneNumber",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1201812591105.236998596567"
+              }
+            },
+            {
+              "name": "MESSAGE",
+              "type": "MESSAGE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1265890641266.1179179605556"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1201812591105.1208288628418",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me your name"
+          },
+          {
+            "type": "PlainText",
+            "value": "What is your name?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1201812591105.236998596567",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Give me the mobile number that will recive message. For basic give indian moble number "
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1201812591105.236998596567",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure is this correct mobile number ?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1265890641266.1179179605556",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the message ?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "11"
+}
